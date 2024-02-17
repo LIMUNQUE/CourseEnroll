@@ -1,0 +1,20 @@
+[
+    {
+        "title": "Producto 1",
+        "id": "1",
+        "description": "Descripción del producto 1",
+        "imageUrl": "/images/img1.webp",
+        "detailsUrl": "/md/first",
+        "price": "150",
+        "long_description": "Descripción larga del producto 1"
+    },
+    {
+        "title": "Producto 2",
+        "id": "2",
+        "description": "Descripción del producto 2",
+        "imageUrl": "/images/img9.webp",
+        "detailsUrl": "/md/second",
+        "price": "100",
+        "long_description": "Descripción larga del producto 2"
+    }
+]
