@@ -7,14 +7,5 @@
         "form": "https://forms.gle/ETLCYU91jmkuSX83A",
         "price": 150
         
-    },
-    {
-        "title": "Producto 2",
-        "description": "Descripción del producto 2",
-        "long_description": "Descripción larga del producto 2",
-        "imageUrl": "https://i.ibb.co/cT1Hjy3/3.jpg",
-        "form": "https://forms.gle/ETLCYU91jmkuSX83A",
-        "price": 100
-        
     }
 ]

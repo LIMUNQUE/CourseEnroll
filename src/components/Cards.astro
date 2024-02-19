@@ -14,7 +14,11 @@ async function getCourses() {
   try {
     const resp = await getDocs(productosRef);
     resp.forEach((doc) => {
-      const course = doc.data();
+      //add data and id
+      const course = {
+        ...doc.data(),
+        id: doc.id,
+      };
       courses.push(course);
     });
   } catch (error) {
@@ -42,11 +46,12 @@ export { courses };
           <a
             transition:animate="slide"
             class="button"
-            href={`/Description/${course.title}`}
+            href={`/Description/${course.id}`}
           >
             <span>Details</span>
           </a>
-          <h4>price: {course.price}</h4>
+          <h4>precio: {course.price}</h4>
+          <h4>personas: {course.people}/40 </h4>
         </span>
       </main>
     ))
