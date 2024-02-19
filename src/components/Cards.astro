@@ -1,5 +1,32 @@
 ---
-import courses from "../courses.json";
+// Importa los módulos necesarios
+import { collection, getDocs } from "firebase/firestore";
+import { db } from "../firebase/config";
+
+// Crea un array para almacenar los cursos
+let courses = [];
+
+// Referencia a la colección "Cursos" en la base de datos
+const productosRef = collection(db, "Cursos");
+
+// Función asincrónica para obtener los cursos
+async function getCourses() {
+  try {
+    const resp = await getDocs(productosRef);
+    resp.forEach((doc) => {
+      const course = doc.data();
+      courses.push(course);
+    });
+  } catch (error) {
+    console.error("Error al obtener los cursos:", error);
+  }
+}
+
+// Llama a la función para obtener los cursos
+await getCourses();
+
+// Exporta el array de cursos
+export { courses };
 ---
 
 <section class="section-cards">
@@ -15,7 +42,7 @@ import courses from "../courses.json";
           <a
             transition:animate="slide"
             class="button"
-            href={`/Description/${course.id}`}
+            href={`/Description/${course.title}`}
           >
             <span>Details</span>
           </a>

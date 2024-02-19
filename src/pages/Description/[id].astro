@@ -2,9 +2,9 @@
 import courses from "../../courses.json";
 import Layout from "../../layouts/Layout.astro";
 
-const { id } = Astro.params;
+const { title } = Astro.params;
 
-const course = courses.find((course) => course.id === id);
+const course = courses.find((course) => course.title === title);
 ---
 
 {
